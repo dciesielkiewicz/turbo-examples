@@ -18,7 +18,6 @@ export default defineConfig({
         './TodoList': './src/TodoList/TodoList.tsx',
       },
       shared: {
-        ...deps,
         react: {
           singleton: true,
           requiredVersion: deps.react,

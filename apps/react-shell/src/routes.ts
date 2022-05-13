@@ -1,1 +1,4 @@
-export const REACT_TODO_ROUTE = '/react-todo';
+export enum Paths {
+  Home = '/',
+  ReactTodo = '/react-todo',
+};

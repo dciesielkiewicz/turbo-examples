@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-import { REACT_TODO_ROUTE } from './routes';
+import { Layout } from '@/components';
+import { Paths } from '@/routes';
 
 
 const TodoList = lazy(
@@ -14,17 +15,21 @@ const TodoList = lazy(
 export const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route
-          path={REACT_TODO_ROUTE}
-          element={(
-            <>
-              Todo List here
-              <TodoList />
-            </>
-          )}
-        />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route
+            path={Paths.ReactTodo}
+            element={(
+              <>
+                Todo List here
+                <Suspense fallback={<div>Loading...</div>}>
+                  <TodoList />
+                </Suspense>
+              </>
+            )}
+          />
+        </Routes>
+      </Layout>
     </Router>
   )
 }

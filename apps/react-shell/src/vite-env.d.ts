@@ -1,6 +1,5 @@
 /// <reference types="vite/client" />
 
-declare module 'craTodo/TodoList'
 declare module 'reactTodo/TodoList'
 
 interface ImportMetaEnv {
