@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare module 'reactTodo/TodoList'
+declare module 'reactTodo/App'
 
 interface ImportMetaEnv {
   readonly VITE_BUILD_TIME_DEPS: string

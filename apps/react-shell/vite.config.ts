@@ -1,5 +1,4 @@
 /// <reference types="vitest" />
-/// <reference types="vite/client" />
 
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
@@ -16,7 +15,7 @@ export default defineConfig({
     federation({
       name: 'reactShell',
       remotes:{
-        reactTodo: 'http://localhost:3001/assets/remoteEntry.js'
+        reactTodo: 'http://localhost:3002/assets/remoteEntry.js'
       },
       shared: {
         react: {
@@ -33,11 +32,12 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: resolve(__dirname, 'src') },
+      { find: '@reactTodo', replacement: resolve(__dirname, '..', 'react-todo', 'src') },
     ],
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './setupTests.ts',
   },
 })

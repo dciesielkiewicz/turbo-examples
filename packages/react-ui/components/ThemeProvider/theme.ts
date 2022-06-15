@@ -1,9 +1,5 @@
-import { createTheme, Theme } from '@mui/material';
+import { createTheme } from '@mui/material';
 import { blue, grey, red, pink } from '@mui/material/colors';
-
-declare module '@mui/styles' {
-  interface DefaultTheme extends Theme {}
-}
 
 export const theme = createTheme({
   palette: {

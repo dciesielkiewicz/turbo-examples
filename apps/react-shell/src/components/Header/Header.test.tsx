@@ -1,6 +1,6 @@
 import { duration } from '@mui/material';
 import { fireEvent } from '@testing-library/react';
-import { render } from '@/test/utils';
+import { render } from 'react-test';
 import { Header } from './Header';
 
 describe('Header', () => {

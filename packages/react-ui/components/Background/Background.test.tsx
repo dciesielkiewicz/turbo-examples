@@ -1,4 +1,4 @@
-import { render } from '@/test/utils';
+import { render } from 'react-test';
 import { Background } from './Background';
 const children = 'children';
 

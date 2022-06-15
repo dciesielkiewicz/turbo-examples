@@ -1,17 +1,19 @@
 import { ReactElement, ReactNode } from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 import {
   render as testingLibraryRender,
   RenderOptions,
+  RenderResult,
 } from '@testing-library/react';
-import { theme } from '../theme';
+
+const theme = createTheme();
 
 interface IAllTheProvidersProps {
   children: ReactNode;
 }
 
-const AllTheProviders = ({ children }: IAllTheProvidersProps) => (
+export const AllTheProviders = ({ children }: IAllTheProvidersProps) => (
   <MemoryRouter>
     <ThemeProvider theme={theme}>
       {children}
@@ -22,4 +24,4 @@ const AllTheProviders = ({ children }: IAllTheProvidersProps) => (
 export const render = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
-) => testingLibraryRender(ui, { wrapper: AllTheProviders, ...options });
+): RenderResult => testingLibraryRender(ui, { wrapper: AllTheProviders, ...options });

@@ -10,7 +10,6 @@ import {
   ListItemText,
   Toolbar,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import ListIcon from '@mui/icons-material/List';
@@ -19,15 +18,15 @@ import { Paths } from '@/routes';
 
 import { useMenuOpened } from './useMenuOpened';
 
-const useStyles = makeStyles(() => ({
+const styles = {
   menu: {
     minWidth: 250,
   },
-}));
+}
 
 export const Header = () => {
-  const classes = useStyles();
   const { closeMenu, isMenuOpened, openMenu } = useMenuOpened();
+
   return (
     <>
       <AppBar position="static">
@@ -39,7 +38,7 @@ export const Header = () => {
       </AppBar>
       <Drawer anchor="left" open={isMenuOpened} onClose={closeMenu}>
         <Box pt={2}>
-          <List component="nav" aria-label="Navigation menu" className={classes.menu}>
+          <List component="nav" aria-label="Navigation menu" sx={styles.menu}>
             <ListItem button component={Link} to={Paths.Home} onClick={closeMenu}>
               <ListItemIcon>
                 <HomeIcon />

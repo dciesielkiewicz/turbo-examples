@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import federation from "@originjs/vite-plugin-federation";
 import react from '@vitejs/plugin-react';
@@ -6,7 +9,7 @@ const deps = require("./package.json").dependencies;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'http://localhost:3001',
+  base: 'http://localhost:3002',
   build: {
     target: 'esnext'
   },
@@ -15,7 +18,7 @@ export default defineConfig({
     federation({
       name: 'reactTodo',
       exposes:{
-        './TodoList': './src/TodoList/TodoList.tsx',
+        './App': './src/App.tsx',
       },
       shared: {
         react: {
@@ -28,5 +31,15 @@ export default defineConfig({
         },
       }
     })
-  ]
+  ],
+  resolve: {
+    alias: [
+      { find: '@reactTodo', replacement: resolve(__dirname, 'src') },
+    ],
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './setupTests.ts',
+  },
 })

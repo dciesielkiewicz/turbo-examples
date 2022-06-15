@@ -1,5 +1,14 @@
-import TodoList from "./TodoList";
+import { SnackbarProvider } from 'notistack';
 
-export const App = () => (
-  <TodoList />
+import { Todo } from "./Todo";
+import { ConfigureAxios } from './ConfigureAxios';
+
+const App = () => (
+  <ConfigureAxios>
+    <SnackbarProvider>
+      <Todo />
+    </SnackbarProvider>
+  </ConfigureAxios>
 );
+
+export default App;
