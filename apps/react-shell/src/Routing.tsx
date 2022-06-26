@@ -6,6 +6,7 @@ import { Layout } from '@/components';
 import { Paths } from '@/routes';
 
 import { Home } from "./Home";
+import ReactSvelteTodo from "./ReactSvelteTodo";
 
 const ReactTodo = lazy(
   () =>
@@ -27,6 +28,10 @@ export const Routing = () => {
                 <ReactTodo />
               </Suspense>
             )}
+          />
+          <Route
+            path={Paths.SvelteTodo}
+            element={<ReactSvelteTodo />}
           />
         </Routes>
       </Layout>

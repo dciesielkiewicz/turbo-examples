@@ -51,6 +51,12 @@ export const Header = () => {
               </ListItemIcon>
               <ListItemText primary="React Todo" />
             </ListItem>
+            <ListItem button component={Link} to={Paths.SvelteTodo} onClick={closeMenu}>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText primary="Svelte Todo" />
+            </ListItem>
           </List>
         </Box>
       </Drawer>

@@ -4,7 +4,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@reactTodo/*": ["../react-todo/src/*"]
+      "@reactTodo/*": ["../react-todo/src/*"],
+      "@svelteTodo/*": ["../svelte-todo/src/*"]
     }
   },
   "exclude": ["**/*.test.ts", "**/*.test.tsx"],

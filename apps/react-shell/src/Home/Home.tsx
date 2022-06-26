@@ -21,6 +21,11 @@ export const Home = () => (
           Go to React TODO App
         </Button>
       </Grid>
+      <Grid item>
+        <Button component={Link} to={Paths.SvelteTodo} variant="contained" color="primary">
+          Go to Svelte TODO App
+        </Button>
+      </Grid>
     </Grid>
   </>
 );

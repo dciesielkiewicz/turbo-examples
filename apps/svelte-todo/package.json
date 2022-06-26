@@ -1,0 +1,39 @@
+{
+  "name": "svelte-todo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3003 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 3003 --strictPort",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.1.5",
+    "@smui/button": "6.0.0-beta.16",
+    "@smui/circular-progress": "6.0.0-beta.16",
+    "@smui/common": "6.0.0-beta.16",
+    "@smui/dialog": "6.0.0-beta.16",
+    "@smui/icon-button": "6.0.0-beta.16",
+    "@smui/paper": "6.0.0-beta.16",
+    "@smui/textfield": "6.0.0-beta.16",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "svelte": "3.39.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tailwindcss": "^3.1.4",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vitest": "^0.12.6"
+  },
+  "dependencies": {
+    "svelte-material-ui": "6.0.0-beta.16"
+  }
+}

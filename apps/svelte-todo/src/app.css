@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, label {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  letter-spacing: -0.00833em;
+  -webkit-font-smoothing: antialiased; 
+}
+
+
+:root {
+  --mdc-theme-primary: #1e88e5;
+  --mdc-theme-secondary: #f50057;
+  --mdc-theme-error: #ff1744;
+}
