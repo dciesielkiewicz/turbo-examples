@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { render } from 'react-test';
 import { Loader } from './Loader';
 

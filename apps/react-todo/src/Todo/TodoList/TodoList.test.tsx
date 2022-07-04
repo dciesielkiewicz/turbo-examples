@@ -1,5 +1,6 @@
+import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import moxios from 'moxios';
-import { act, waitFor } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { render } from '@reactTodo/testUtils';
 import { ITodo } from '../types';
 import { TodoList } from './TodoList';
